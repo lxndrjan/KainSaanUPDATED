@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-jost {
+  font-family: "Jost", sans-serif !important;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.font-poiret {
+  font-family: "Poiret One", cursive !important;
+}
+
+.error-input {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.animate__delay-04-8s {
+  -webkit-animation-delay: 0.48s !important;
+  animation-delay: 0.48s !important;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.loader {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #085fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin-top: 48px !important;
+  margin: auto;
+  position: relative;
+  color: #000;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 2px, -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important; /* Firefox */
+}
+
+.vue3-star-ratings__wrapper {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.vue3-star-ratings {
+  width: fit-content !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.marker-position {
+  bottom: 25px;
+  left: 0;
+  position: relative;
+}
+
+/*-----------------------------Dashboard---------------------------*/
+
+/*Containers of Users, FEs, clicks, reviews*/
+#column1 {
+  background-color: #6666ff;
+  height: 297px;
+  width: 565px;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+#column2 {
+  background-color: #9900cc;
+  height: 297px;
+  width: 565px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+#column3 {
+  background-color: #ff4d4d;
+  height: 297px;
+  width: 565px;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+#column4 {
+  background-color: #73c71f;
+  height: 297px;
+  width: 565px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+
+/*Rows and Columns of Admin*/
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#column1, #column2, #column3, #column4 {
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#column1:hover, #column2:hover, #column3:hover, #column4:hover {
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/*Texts of Dashboard*/
+#txtDashboard {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+
+/*Text, Rows and Columns inside Number of Clicks*/
+.insideRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.insideColumn{
+  float: left;
+  width: 50%;
+}
+
+#txtNoOfFe, #txtIntFe, #txtNoOfUsers, #txtIntUsers, #txtNoOfClicks, #txtIntClicks, #txtNoOfReviews, #txtIntReviews{
+  margin-top: 135px;
+  text-align: center;
+}
+
+#txtNoOfFe, #txtNoOfUsers, #txtNoOfClicks, #txtNoOfReviews {
+  margin-left: 30px;
+  line-height: 1.6;
+  font-size: 19px;
+}
+
+#txtIntFe, #txtIntUsers, #txtIntClicks, #txtIntReviews {
+  font-size: 90px;
+}
+
+
+/*-----------------------------Analytics---------------------------*/
+
+/* Texts of Analytics */
+
+#txtAnalytics {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+/* Columns and Rows of Analytics */
+.analyticsRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.analyticsColumn{
+  float: left;
+  width: 50%;
+  
+}
+
+/* Images of Analytics */
+
+.analImg {
+  height: 400px;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.singleRowImg1 {
+  height: 300px;
+  width: 94.5%;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 10px;
+}
+
+.singleRowImg2 {
+  height: 300px;
+  width: 94.5%;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 10px;
+}
+
+.analImg:hover, .singleRowImg1:hover, .singleRowImg2:hover, .singleRowImg3:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+/*-----------------------------Users---------------------------*/
+
+
+/*-----------------------------Food Establishments---------------------------*/
+
+
+/*-----------------------------Reports and Reviews---------------------------*/
